@@ -5,33 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geometricas|Curso practico de JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/af0bf7190a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./tablet.css" media="(min-width:750px)">
 </head>
 <body>
     <header>
-        <h1>Figuras Geometricas</h1>
-        <p>Este es el primer taller del curso practico de JavaScript</p>
+        <h1 class="header-title">Figuras Geometricas</h1>
+        <p class="header-subtitle">Este es el primer taller del curso practico de JavaScript</p>
     </header>
-    <section>
-        <h2>
-            Calcula el area y perimetro de un Cuadrado
-        </h2>
-        <form>
-            <label for="InputCuadrado">
-                Escribe cuanto mide cada lado de tu Cuadrado.
-            </label>
-            <input id="InputCuadrado" type="number"/>
-            <button type="button" onclick="calcularPerimetroCuadrado()">
-                Calcular perimetro
-            </button>
-            <button type="button" onclick="calcularAreaCuadrado()">
-                Calcular area
-            </button>
-            <!-- Nota: Se debe agregar un id al input para que cuando se haga click en el label
-            el focus se vaya al input y en los botones se agrega el atributo a la etiqueta button
-            onclick que sera igual al nombre de la funcion que ejecutaran 
-            el atributo type=button es para que no se recargue la pagina cuando se haga click en los botones-->
-        </form>
-    </section>
+    <div class="separador"></div>
+    <main>
+        <section class="main-container">
+            <h2 class="square-title">
+                Calcula el area y perimetro de un Cuadrado
+            </h2>
+            <form class="square-data--container">
+                <label class="container-text" for="InputCuadrado">
+                    Escribe las medidas correspondientes de tu Cuadrado.
+                </label>
+                <figure class="square-img">
+                   <img src="./imgs/square-solid.svg" alt="Cuadrado">
+                </figure>
+                <input class="square-input" placeholder="Lado del Cuadrado" id="InputCuadrado" type="number"/>
+                <div class="buttons-container">
+                    <button class="button-perimeterS buttons" type="button" onclick="calcularPerimetroCuadrado()">
+                        Calcular perimetro  
+                    </button>
+                    <button class="button-areaS buttons" type="button" onclick="calcularAreaCuadrado()">
+                        Calcular area
+                    </button>
+                </div>
+                <!-- Nota: Se debe agregar un id al input para que cuando se haga click en el label
+                el focus se vaya al input y en los botones se agrega el atributo a la etiqueta button
+                onclick que sera igual al nombre de la funcion que ejecutaran 
+                el atributo type=button es para que no se recargue la pagina cuando se haga click en los botones-->
+            </form>
+        </section>
+        <div class="separador"></div>
+        <section class="triangle-container main-container">
+            <h2 class="triangle-title">
+                Calcula el area y perimetro de un Triangulo
+            </h2>
+            <form class="triangle-data--container">
+                <label class="container-text" for="InputTriangle1">
+                    Escribe las medidas correspondientes de tu Triangulo.
+                </label>
+                <figure class="triangle-img">
+                    <img src="./imgs/triangle.png" alt="Triangulo">
+                </figure>
+                <input class="triangle-input" placeholder="Lado 1" id="InputTriangle1" type="number"/>
+                <input class="triangle-input" placeholder="Lado 2" id="InputTriangle2" type="number"/>
+                <input class="triangle-input" placeholder="Base(Lado3)" id="InputTriangle3" type="number"/>
+                <input class="triangle-input" placeholder="Altura" id="InputTriangle4" type="number"/>
+                <div class="buttons-container">
+                    <button class="button-perimeterT buttons" type="button" onclick="calcularPerimetroTriangulo()">
+                        Calcular perimetro  
+                    </button>
+                    <button class="button-areaT buttons" type="button" onclick="calcularAreaTriangulo()">
+                        Calcular area
+                    </button>
+                </div>
+                <!-- Nota: Se debe agregar un id al input para que cuando se haga click en el label
+                el focus se vaya al input y en los botones se agrega el atributo a la etiqueta button
+                onclick que sera igual al nombre de la funcion que ejecutaran 
+                el atributo type=button es para que no se recargue la pagina cuando se haga click en los botones-->
+            </form>
+        </section>
+        <div class="separador"></div>
+        <section class="circle-container main-container">
+            <h2 class="circle-title">
+                Calcula el area y perimetro de un Circulo
+            </h2>
+            <form class="triangle-data--container">
+                <label class="container-text" for="InputTriangle">
+                    Escribe las medidas correspondientes de tu Circulo.
+                </label>
+                <figure class="circle-img">
+                    <img src="./imgs/circle.png" alt="Circulo">
+                </figure>
+                <input class="circle-input" placeholder="Radio" id="InputCirculo" type="number"/>
+                <div class="buttons-container">
+                    <button class="button-perimeterC buttons" type="button" onclick="calcularPerimetroCirculo()">
+                        Calcular perimetro  
+                    </button>
+                    <button class="button-areaC buttons" type="button" onclick="calcularAreaCirculo()">
+                        Calcular area
+                    </button>
+                </div>
+                <!-- Nota: Se debe agregar un id al input para que cuando se haga click en el label
+                el focus se vaya al input y en los botones se agrega el atributo a la etiqueta button
+                onclick que sera igual al nombre de la funcion que ejecutaran 
+                el atributo type=button es para que no se recargue la pagina cuando se haga click en los botones-->
+            </form>
+        </section>
+    </main>
+    <div class="separador"></div>
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <p>By OzCode</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <script src="./figuras.js"></script>
 </body>
 </html>

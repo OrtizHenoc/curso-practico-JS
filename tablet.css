@@ -1,0 +1,17 @@
+main{
+    display: flex;
+    height: 70vh;
+}
+header{
+    height: 10vh;
+}
+footer{
+    height: 10vh;
+}
+.separador{
+    height: 5vh;
+}
+.main-container{
+    width: 260px;
+    margin: 0 auto;
+}
