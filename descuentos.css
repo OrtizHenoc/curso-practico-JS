@@ -80,3 +80,6 @@ select , option {
     background-color: var(--button-color);
     color: white;
 }
+.result-p{
+    font-size: 1.5rem;
+}
