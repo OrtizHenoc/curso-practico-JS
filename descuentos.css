@@ -1,0 +1,82 @@
+:root{
+    --border-color:rgb(20, 19, 18);
+    --border-label: rgba(0, 0, 0, 0.7);
+    --button-color:#274d8b;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+.header-title{
+    width: 70%;
+    border-radius: 10px;
+    border: 2px var(--border-color) solid;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.8rem;
+}
+.maint-title{
+    text-align: center;
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main-img{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px var(--border-color) solid;
+}
+.main-img img{
+    width: 80%;
+    height: 80%;
+    max-width: 300px;
+    max-height: 300px;    
+}
+.main-form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border: 2px var(--border-color) solid;
+    margin-top: 10px;
+}
+.form-item{
+    width: 90%;
+    margin: 10px auto;
+}
+.cupons-container{
+    display: flex;
+}
+.cupons{
+    border-radius: 5px;
+}
+.form-label{
+    font-size: 1.5rem;
+    border: 1px var(--border-label) solid;
+    max-width: 50px;
+    margin-right: 5px;
+}
+.button{
+    background-color: var(--button-color);
+    color: white;
+    height: 25px;
+    border-radius: 10px;
+}
+select , option {
+    background-color: var(--button-color);
+    color: white;
+}
