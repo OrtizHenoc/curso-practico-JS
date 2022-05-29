@@ -8,17 +8,36 @@ function calcularPrecioConDescuento(precio,descuento ,cupones){
     const precioConDescuento = (precio * porcentajePrecioConDescuento)/100
     return precioConDescuento
 }
-
+const coupons = [
+    "JuanDC_es_Batman",
+    "pero_no_le_digas_a_nadie",
+    "es_un_secreto",
+];
 function onClickButtonPriceDiscount(){
     const inputPrice = document.getElementById("InputPrice");
     const priceValue =  parseInt(inputPrice.value);
     
-    const inputDiscount = document.getElementById("InputDiscount");
-    const discountValue  =  parseInt(inputDiscount.value);
+    // const inputDiscount = document.getElementById("InputDiscount");
+    // const discountValue  =  parseInt(inputDiscount.value);
+    const inputCoupon = document.getElementById("InputCoupon");
+    const couponValue = inputCoupon.value;
+
+    let descuento;
     
+    switch(couponValue) {
+      case coupons[0]: // "JuanDC_es_Batman"
+        descuento = 15;
+      break;
+      case coupons[1]: // "pero_no_le_digas_a_nadie"
+        descuento = 30;
+      break;
+      case coupons[2]: // "es_un_secreto"
+        descuento = 25;
+      break;
+    }
     /* Para obtener el valor del select */
     const cod = parseInt(document.getElementById("cupons").value);
-    const precioConDescuento =  calcularPrecioConDescuento(priceValue,discountValue,cod);
+    const precioConDescuento =  calcularPrecioConDescuento(priceValue,descuento,cod);
     const result1 = document.getElementById("Result1");
     const result2 = document.getElementById("Result2");
     result1.innerText = "El precio con descuento son: $" + precioConDescuento 
