@@ -3,11 +3,11 @@
 //No me convence que se usen tantas variables
 function calcularPrecioConDescuento(precio,descuento ,cupones){
     var entre = false;
-    // if((descuento+cupones)>=100){
-    //     const precioConDescuento1=0
-    //     entre=true;
-    //     return precioConDescuento1;
-    // }
+    if((descuento+cupones)>=100){
+        const precioConDescuento1=0
+        entre=true;
+        return precioConDescuento1;
+    }
     const descuentoTotal = descuento+cupones;
     var porcentajePrecioConDescuento = 100-descuentoTotal;
     const precioConDescuento = (precio * porcentajePrecioConDescuento)/100
