@@ -1,33 +1,39 @@
 const lista1 = [
-    1,
-    2,
-    3,
-    1,
-    2,
-    3,
-    4,
-    2,
-    2,
-    2,
-    1,
+    "gato",
+    "Perro",
+    "Conejo",
+    "Perro",
+    "Perro",
+    "gato",
+    "gato",
+    "gato",
+    "Conejo",
+    "Conejo",
+    "Perro",
+    "Perro",
+    "Perro",
 ];
 
-const lista1Count = {};
+function calcularModa(lista){
 
-lista1.map(
-    function (elemento){
-        if(lista1Count[elemento]){
-            lista1Count[elemento] +=1; 
-        }else{
-            lista1Count[elemento] = 1;
+    const listaCount = {};
+    
+    lista.map(
+        function (elemento){
+            if(listaCount[elemento]){
+                listaCount[elemento] +=1; 
+            }else{
+                listaCount[elemento] = 1;
+            }
         }
-    }
-);
-
-const list1Array = Object.entries(lista1Count).sort(
-    function (a,b){
-        return a[1]-b[1];
-    }
-)
-
-const moda = list1Array[list1Array.length-1]
+    );
+    
+    const listArray = Object.entries(listaCount).sort(
+        function (a,b){
+            return a[1]-b[1];
+        }
+    )
+    
+    const moda = listArray[listArray.length-1]
+    return moda
+}
