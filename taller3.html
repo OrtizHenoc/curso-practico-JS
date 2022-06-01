@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidas estadisticas</title>
+    <link rel="stylesheet" href="./taller3.css">
+</head>
+<body>
+    <header>
+        <h2 class="header-title">Medidas de tendencia central</h2>
+    </header>
+    <main>
+        <section class="main-container">
+            <div class="main-header">
+                <h2 class="main-title">Ingresa los valores separados por coma</h2>
+                <form action="form-measures">
+                    <input class="main-input" type="text" placeholder="Enter the data separated by commas" name="datos" id="datos">
+                </form>
+            </div>
+            <div class="button-container">
+                <button onclick="calcularMediajs()" class=" buttons">Calcular Media aritmetica</button>
+                <button onclick="calcularModajs()" class=" buttons">Calcular Moda</button>
+                <button onclick="calcularMedianajs()" class=" buttons">Calcular Mediana</button>
+            </div>
+            <div class="p-container">
+                <p id="pResultMedia"></p>
+                <p id="pResultMediana"></p>
+                <p id="pResultModa"></p>
+            </div>
+        </section>
+    </main>
+    <script src="./taller3.js"></script>
+</body>
+</html>
