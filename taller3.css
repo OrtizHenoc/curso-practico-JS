@@ -56,6 +56,10 @@ html{
     display: flex;
     flex-direction: column;
 }
+.result-container{
+    width: 100%;
+    display: flex;
+}
 .buttons{
     width: 70%;
     height:40px;
@@ -63,4 +67,21 @@ html{
     border-radius: 15px;
     background-color: var(--contraste-cuatro);
     color: var(--font-color);
+}
+
+.p-container{
+    width: 100%;
+
+}
+.p-result{
+    font-size: 1.4rem;
+    line-height: 35px;
+    width: 70%;
+    height:40px;
+    margin: 15px 0;
+    border-radius: 15px;
+    margin: 20px auto;
+    background-color: var(--contraste-cuatro);
+    color: var(--font-color);
+    border: 1px black solid;
 }
